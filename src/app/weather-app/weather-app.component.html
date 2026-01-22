@@ -1,1 +1,73 @@
-<p>weather-app works!</p>
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow-lg p-4 text-center" style="width: 100%; max-width: 420px;">
+
+    <h2 class="text-success fw-bold">GeeksforGeeks</h2>
+    <p class="text-muted mb-3">Weather App Using Angular</p>
+
+    <!-- Input -->
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter city name"
+        [(ngModel)]="cityName"
+      >
+      <button class="btn btn-success" (click)="getWeather()">
+        Get Weather
+      </button>
+    </div>
+
+    <!-- Loading -->
+    <div *ngIf="loading" class="alert alert-info py-2">
+      Loading...
+    </div>
+
+    <!-- Error -->
+    <div *ngIf="error" class="alert alert-danger py-2">
+      {{ error }}
+    </div>
+
+    <!-- Weather Info -->
+    <div
+      *ngIf="weatherData"
+      class="animate__animated animate__fadeIn mt-3"
+    >
+      <h4 class="fw-bold">{{ weatherData.name }}</h4>
+      <p class="text-muted mb-1">{{ currentDate }}</p>
+
+      <img
+        [src]="iconUrl"
+        alt="Weather Icon"
+        class="my-2"
+        width="80"
+      >
+
+      <h1 class="fw-bold">{{ weatherData.main.temp }}°C</h1>
+      <p class="text-capitalize text-secondary">
+        {{ weatherData.weather[0].description }}
+      </p>
+
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="border rounded p-2">
+            <small class="text-muted">Humidity</small>
+            <p class="fw-semibold mb-0">
+              {{ weatherData.main.humidity }}%
+            </p>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="border rounded p-2">
+            <small class="text-muted">Wind</small>
+            <p class="fw-semibold mb-0">
+              {{ weatherData.wind.speed }} m/s
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
