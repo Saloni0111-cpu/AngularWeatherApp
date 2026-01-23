@@ -1,8 +1,8 @@
 <div class="container min-vh-100 d-flex justify-content-center align-items-center">
   <div class="card shadow-lg p-4 text-center" style="width: 100%; max-width: 420px;">
 
-    <h2 class="text-success fw-bold">GeeksforGeeks</h2>
-    <p class="text-muted mb-3">Weather App Using Angular</p>
+    <h2 class="text-success fw-bold">Saloni's</h2>
+    <p class="text-muted mb-3 animate__animated animate__fadeIn">Weather App Built with  Angular</p>
 
     <!-- Input -->
     <div class="input-group mb-3">
@@ -12,7 +12,7 @@
         placeholder="Enter city name"
         [(ngModel)]="cityName"
       >
-      <button class="btn btn-success" (click)="getWeather()">
+      <button class="btn btn-success align-items-center" (click)="getWeather()">
         Get Weather
       </button>
     </div>
@@ -20,11 +20,6 @@
     <!-- Loading -->
     <div *ngIf="loading" class="alert alert-info py-2">
       Loading...
-    </div>
-
-    <!-- Error -->
-    <div *ngIf="error" class="alert alert-danger py-2">
-      {{ error }}
     </div>
 
     <!-- Weather Info -->

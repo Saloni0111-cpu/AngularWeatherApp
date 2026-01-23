@@ -15,4 +15,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 1. set up project directory
 2. installed moment library for real time data fetching
+3. Used HttpClient to call openWeather API which handles
+   - API response to populate:
+   - Temperature, description, humidity, etc.
+   - Weather icon
+   - Current date/time using moment.js
+4. Forms & User Input
+
 
