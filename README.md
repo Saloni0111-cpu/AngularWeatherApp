@@ -23,3 +23,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 4. Forms & User Input
 
 
+## Here is the output 
+
+![WeatherApp Output](public/Weather.png)
+
+
